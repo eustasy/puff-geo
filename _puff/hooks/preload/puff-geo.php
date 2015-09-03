@@ -3,7 +3,7 @@
 use GeoIp2\Database\Reader;
 
 if (
-	// $Sitewide['Settings']['GeoLocate On Load'] &&
+	!empty($Sitewide['Settings']['GeoLocate On Load']) &&
 	is_readable($Sitewide['Puff']['Libs'].'geoip2.phar')
 ) {
 
