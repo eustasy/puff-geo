@@ -1,3 +1,6 @@
+# Special
+google68cf6f5d58f84416.html
+# Standard
 *custom*
 *~
 # puff-core
@@ -7,6 +10,7 @@ assets/js/external-links.js
 assets/js/jQl.min.js
 assets/hsts-attempt.php
 assets/css/puff-core-index.css
+.gitignore-core
 ARCHITECTURE.md
 index.php
 _puff/hooks/header/empty.php
