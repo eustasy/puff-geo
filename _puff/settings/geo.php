@@ -6,4 +6,4 @@
 $Sitewide['Settings']['GeoLocate On Load'] = true;
 
 // Geo Version
-$Sitewide['Version']['Geo'] = '0.1';
+$Sitewide['Version']['Geo'] = '0.3';
