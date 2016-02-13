@@ -1,3 +1,4 @@
 # puff-geo
 _libs/GeoLite2-City.mmdb
 _libs/geoip2.phar
+_settings/geo*
