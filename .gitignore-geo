@@ -1,4 +1,4 @@
-# puff-geo
+# Puff Geo
 _libs/GeoLite2-City.mmdb
 _libs/geoip2.phar
 _puff/hooks/preload/puff-geo.php
