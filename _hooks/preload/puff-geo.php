@@ -6,7 +6,7 @@ if (
 	!empty($Sitewide['Settings']['GeoLocate On Load']) &&
 	is_readable($Sitewide['Puff']['Libs'].'geoip2.phar')
 ) {
-
+	// Figure out IP
 	if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
 		$ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
 	} else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -16,9 +16,9 @@ if (
 	} else {
 		$ip = $_SERVER['REMOTE_ADDR'];
 	}
-
+	// Require GeoIP2
 	require_once $Sitewide['Puff']['Libs'].'geoip2.phar';
-
+	// Try and do the thing
 	try {
 		if ( $debug ) {
 			echo $ip."\n";
@@ -33,7 +33,7 @@ if (
 		}
 		$Sitewide['Geo']['Continent'] = $record->continent->code;
 		$Sitewide['Geo']['Country']   = $record->country->isoCode;
-
+	// Catch any failures, but be nice about it.
 	} catch (\Exception $e) {
 		echo '<!-- '.$e->getMessage().' -->'."\n";
 		$Sitewide['Geo']['Continent'] = false;
