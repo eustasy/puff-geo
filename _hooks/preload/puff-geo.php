@@ -31,7 +31,7 @@ if (
 		$Sitewide['Geo']['Country']   = $record->country->isoCode;
 	// Catch any failures, but be nice about it.
 	} catch (\Exception $e) {
-		echo '<!-- '.$e->getMessage().' -->'."\n";
+		// echo '<!-- '.$e->getMessage().' -->'."\n";
 		$Sitewide['Geo']['Continent'] = false;
 		$Sitewide['Geo']['Country']   = false;
 	}
